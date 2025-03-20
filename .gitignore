@@ -13,7 +13,7 @@
 
 # misc
 .DS_Store
-.idea
+.idea/
 *.pem
 
 # debug
@@ -29,5 +29,6 @@ yarn-error.log*
 .env.production.local
 
 # Docker
-docker/tmp/nginx/cache
-docker/tmp/nginx/logs
+
+docker/tmp/nginx/*
+!docker/tmp/nginx/.gitkeep

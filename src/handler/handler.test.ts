@@ -1,5 +1,4 @@
-import { ImageSize } from "@storiny/shared";
-
+import { ImageSize } from "../image-size";
 import { BASE_BUCKET, handler, UPLOADS_BUCKET } from "./handler";
 
 const IMAGE_SIZES = Object.values(ImageSize).filter(
@@ -64,7 +63,7 @@ describe("handler", () => {
   });
 
   it("ignores size for download option", () => {
-    req_obj.uri = "/dl/w@24/object_key";
+    req_obj.uri = "/dl/w@64/object_key";
     handler(req_obj as NginxHTTPRequest);
 
     expect(req_obj.variables?.proxy_rewrite).toEqual(

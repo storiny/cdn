@@ -1,4 +1,4 @@
-import { ImageSize } from "@storiny/shared/src/enums/image-size";
+import { ImageSize } from "../image-size";
 
 const VALID_SIZES = Object.values(ImageSize)
   .filter((value) => typeof value === "number")

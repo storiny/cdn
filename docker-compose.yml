@@ -34,7 +34,7 @@ services:
     ports:
       - "8080:8080"
     healthcheck:
-      test: [ "CMD", "imgproxy", "health" ]
+      test: ["CMD", "imgproxy", "health"]
       timeout: 10s
       interval: 10s
       retries: 3

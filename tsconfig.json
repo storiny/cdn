@@ -1,6 +1,6 @@
 {
   "extends": "@storiny/tsconfig/base.json",
-  "include": [".", "../../node_modules/njs-types/ngx_http_js_module.d.ts"],
+  "include": [".", "./node_modules/njs-types/ngx_http_js_module.d.ts"],
   "compilerOptions": {
     "target": "ES5",
     "module": "ES2015",
@@ -21,7 +21,7 @@
       "ES2019.Symbol",
       "ES2020.Promise",
       "ES2021.Promise",
-      "ES2021.String",
+      "ES2021.String"
     ]
   }
 }
