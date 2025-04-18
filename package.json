@@ -20,7 +20,6 @@
     "@rollup/plugin-node-resolve": "^15.1.0",
     "@storiny/eslint-config": "^1.1.0",
     "@storiny/prettier-config": "^1.1.0",
-    "@storiny/test-utils": "^1.1.0",
     "@storiny/tsconfig": "^1.0.0",
     "@swc/core": "^1.11.11",
     "@swc/jest": "^0.2.37",
