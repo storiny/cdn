@@ -1,8 +1,8 @@
-FROM nginx:mainline-alpine as builder
+FROM nginx:1.26.0-alpine AS builder
 
 COPY ./ /modules/
 
-ARG modules="njs"
+ARG modules="njs headers-more"
 
 RUN set -ex \
     && apk update \
@@ -54,7 +54,7 @@ RUN set -ex \
     done \
     && echo "BUILT_MODULES=\"$BUILT_MODULES\"" > /tmp/packages/modules.env
 
-FROM nginx:mainline-alpine
+FROM nginx:1.26.0-alpine
 COPY --from=builder /tmp/packages /tmp/packages
 RUN set -ex \
     && . /tmp/packages/modules.env \
